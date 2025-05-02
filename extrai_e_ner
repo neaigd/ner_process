@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 "/media/peixoto/stuff/ner_process/extrai_e_ner.py" "$@"

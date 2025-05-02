@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Script de Extra&#xe7;&#xe3;o de Texto PDF e NER Jur&#xed;dico com Fabric","children":[{"content":"Prop&#xf3;sito","children":[{"content":"Automatizar extra&#xe7;&#xe3;o de texto de PDF","children":[],"payload":{"tag":"li","lines":"3,4"}},{"content":"Executar padr&#xe3;o Fabric de NER jur&#xed;dico","children":[],"payload":{"tag":"li","lines":"4,5"}},{"content":"Gerar sa&#xed;da em JSON","children":[],"payload":{"tag":"li","lines":"5,7"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"Pr&#xe9;&#x2011;requisitos","children":[{"content":"<strong>Python&#xa0;3</strong>","children":[{"content":"<code>argparse</code> (builtin)","children":[],"payload":{"tag":"li","lines":"9,10"}}],"payload":{"tag":"li","lines":"8,10"}},{"content":"<strong>PyPDF2</strong>","children":[{"content":"<code>pip install PyPDF2</code>","children":[],"payload":{"tag":"li","lines":"11,12"}}],"payload":{"tag":"li","lines":"10,12"}},{"content":"<strong>Fabric CLI</strong>","children":[{"content":"Configurar LLM (OpenAI, Claude, Ollama&#x2026;)","children":[],"payload":{"tag":"li","lines":"13,14"}}],"payload":{"tag":"li","lines":"12,14"}},{"content":"<strong>Pattern ner_juridico</strong>","children":[{"content":"Arquivo <code>ner_juridico.md</code> em <code>~/.config/fabric/patterns/</code>","children":[],"payload":{"tag":"li","lines":"15,17"}}],"payload":{"tag":"li","lines":"14,17"}}],"payload":{"tag":"h2","lines":"7,8"}},{"content":"Instala&#xe7;&#xe3;o","children":[{"content":"Salvar script como <code>extrai_e_ner.py</code>","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"(Opcional) <code>chmod +x extrai_e_ner.py</code>","children":[],"payload":{"tag":"li","lines":"19,21"}}],"payload":{"tag":"h2","lines":"17,18"}},{"content":"Uso","children":[{"content":"<strong>Sintaxe b&#xe1;sica</strong><pre data-lines=\"23,25\"><code class=\"language-bash\">python3 extrai_e_ner.py &lt;arquivo_pdf&gt; [--txt-dir DIR_TXT] [--json-dir DIR_JSON]\n</code></pre>","children":[],"payload":{"tag":"li","lines":"22,25"}}],"payload":{"tag":"h2","lines":"21,22"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>
